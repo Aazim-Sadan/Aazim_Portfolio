@@ -34,7 +34,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <AdHeader
-            title="🚀 AcaMock_AI"
+            title="🚀 AceMock_AI"
             description="Level Up Your Job Prep with Mock Interviews"
             buttonText="View"
             href="https://acemock-ai-react.web.app"
