@@ -17,10 +17,10 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: '/aazim.png', sizes: 'any', type: 'image/x-icon' },
-      { url: '/haquedot.svg', sizes: '16x16', type: 'image/png' },
-      { url: '/haquedot.svg', sizes: '32x32', type: 'image/png' },
+      { url: '/aazim.png', sizes: '16x16', type: 'image/png' },
+      { url: '/aazim.png', sizes: '32x32', type: 'image/png' },
     ],
-    apple: '/haquedot.svg',
+    apple: '/aazim.png',
   },
 }
 

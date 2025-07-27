@@ -54,37 +54,20 @@ const projects = [
     ],
   },
   {
-    title: "Humanity Care Foundation",
+    title: "WorkHive",
     description:
-      "A modern website for a charitable organization, highlighting their mission, donation options, and community impact with a smooth UI/UX experience.",
-    image: "/humanitycarefoundation.webp",
-    tags: ["Next.js", "Tailwind CSS", "Framer Motion", "Figma", "Nodemailer"],
-    demoUrl: "https://www.humanitycarefoundation.in/",
+      "Job portal app, allowing candidates to apply for jobs, save listings, and recruiters to manage job postings.",
+    image: "/Horkhive.webp",
+    tags: ["React.js","Node.js","Express.js", "MongoDB", "Redux-Toolkit", "Tailwind", "Shadcn"],
+    demoUrl: "https://job-portal-mern-z2za.onrender.com",
     githubUrl: "",
     features: [
-      "Animated homepage using Framer Motion for engaging transitions",
-      "Clean and responsive design built with Tailwind CSS",
-      "Contact form with Nodemailer for email handling",
-      "Sections like About, Mission, Services, Gallery, and Contact",
-      "Designed in Figma and implemented using Next.js for fast performance",
+      "Employed JWTs for authentication, securing user sessions and protecting sensitive data",
+      "Secure backend APIs with NodeJs and ExpressJs, handling user authentication, job management, and role-based access",
+      "JWTs for authentication, securing user sessions and protecting sensitive data",
+      "Cloudinary for efficient and scalable media storage and management",
     ]
-  },
-  {
-    title: "Exceed Robotics",
-    description:
-      "Program enrollment camps and blog pages for Exceed Robotics, focusing on intuitive user experience.",
-    image: "/exceedrobotics.webp",
-    tags: ["HTML", "CSS", "JavaScript", "Bootstrap", "jQuery"],
-    demoUrl: "https://exceedrobotics.com/",
-    githubUrl: "",
-    features: [
-      "Responsive program enrollment pages",
-      "Interactive blog section",
-      "Optimized for speed and accessibility",
-      "Cross-browser compatible design",
-      "Collaborative development with team members",
-    ],
-  },
+  }
 ]
 
 export default function Projects() {
