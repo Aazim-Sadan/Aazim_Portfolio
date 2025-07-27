@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   description: "Portfolio website of Aazim Sadan, a Software Developer",
   icons: {
     icon: [
-      { url: '/haquedot.svg', sizes: 'any', type: 'image/x-icon' },
+      { url: '/aazim.png', sizes: 'any', type: 'image/x-icon' },
       { url: '/haquedot.svg', sizes: '16x16', type: 'image/png' },
       { url: '/haquedot.svg', sizes: '32x32', type: 'image/png' },
     ],
@@ -34,7 +34,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <AdHeader
-            title="🚀 SummAIze "
+            title="🚀 AcaMock_AI"
             description="Level Up Your Job Prep with Mock Interviews"
             buttonText="View"
             href="https://acemock-ai-react.web.app"
