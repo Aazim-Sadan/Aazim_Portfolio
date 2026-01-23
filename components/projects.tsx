@@ -43,7 +43,7 @@ const projects = [
       "An mock interview platform that leverages Gemini AI to enhance your interview preparation with intelligent feedback and real-time interaction",
     image: "/AceMockAI.webp",
     tags: ["React.js", "Gemini AI", "Firebase"],
-    demoUrl: "https://acemock-ai-react.web.app",
+    demoUrl: "https://ace-mock-ai-qm5y.vercel.app/",
     githubUrl: "",
     features: [
       "Realistic AI-driven interview questions",

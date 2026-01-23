@@ -37,7 +37,7 @@ export default function RootLayout({
             title="🚀 AceMock_AI"
             description="Level Up Your Job Prep with Mock Interviews"
             buttonText="View"
-            href="https://acemock-ai-react.web.app"
+            href="https://ace-mock-ai-qm5y.vercel.app"
             isExternal={true}
             dismissible={true}
           />
