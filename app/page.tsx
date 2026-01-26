@@ -9,10 +9,10 @@ export default function Home() {
   return (
     <div className="mx-auto max-w-5xl space-y-20 py-10">
       <Hero />
-      {/* <Experience /> */}
+      <Experience />
       <Skills />
-      <Projects />
       <Education />
+      <Projects />
       <Contact />
     </div>
   )

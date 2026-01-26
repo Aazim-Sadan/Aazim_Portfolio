@@ -2,44 +2,33 @@
 
 import { motion } from "framer-motion"
 import { FaCss3, FaGitAlt, FaGithub, FaHtml5, FaJs, FaReact } from "react-icons/fa";
-import { SiFirebase, SiMongodb, SiPostgresql, SiPostman, SiShadcnui, SiTypescript } from "react-icons/si";
+import { SiFirebase, SiMongodb, SiMysql, SiPostgresql, SiPostman, SiShadcnui, SiTypescript } from "react-icons/si";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { VscVscode } from "react-icons/vsc";
 import {  IoLogoVercel } from "react-icons/io5";
+import { skillsData } from "@/constants/skills";
 
-const skillCategories = [
-  {
-    title: "Front End",
-    skills: [
-      { name: "JavaScript", icon: <FaJs className="text-yellow-400" /> },
-      { name: "React.js", icon: <FaReact className="text-blue-500" /> },
-      { name: "Next.js", icon: <RiNextjsFill className="text-black dark:text-white" /> },
-      { name: "TypeScript", icon: <SiTypescript className="text-blue-600" /> },
-      { name: "HTML", icon: <FaHtml5 className="text-orange-600" /> },
-      { name: "CSS", icon: <FaCss3 className="text-blue-500" /> },
-      { name: "Tailwind CSS", icon: <RiTailwindCssFill className="text-cyan-400" /> },
-      { name: "Shadcn", icon: <SiShadcnui className="text-gray-400" /> },
-    ],
-  },
-  {
-    title: "Databases",
-    skills: [
-      { name: "MongoDB", icon: <SiMongodb className="text-green-500" /> },
-      { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-700" /> },
-    ],
-  },
-  {
-    title: "Tools & Platforms",
-    skills: [
-      { name: "Git", icon: <FaGitAlt className="text-orange-600" /> },
-      { name: "GitHub", icon: <FaGithub className="text-black dark:text-white" /> },
-      { name: "VS Code", icon: <VscVscode className="text-blue-500" /> },
-      { name: "Postman", icon: <SiPostman className="text-orange-500" /> },
-      { name: "Firebase", icon: <SiFirebase className="text-yellow-400" /> },
-      { name: "Vercel", icon: <IoLogoVercel className="text-black dark:text-white" /> },
-    ],
-  },
-]
+
+const iconMap: Record<string, React.ReactNode> = {
+  FaJs: <FaJs />,
+  FaReact: <FaReact />,
+  SiTypescript: <SiTypescript />,
+  RiNextjsFill: <RiNextjsFill />,
+  FaHtml5: <FaHtml5 />,
+  FaCss3: <FaCss3 />,
+  SiShadcnui: <SiShadcnui />,
+  RiTailwindCssFill: <RiTailwindCssFill />,
+  SiMongodb: <SiMongodb />,
+  SiMysql: <SiMysql />,
+  SiPostgresql: <SiPostgresql />,
+  FaGitAlt: <FaGitAlt />,
+  SiPostman: <SiPostman />,
+  SiFirebase: <SiFirebase />,
+  FaGithub: <FaGithub />,
+  VscVscode: <VscVscode />,
+  IoLogoVercel: <IoLogoVercel />,
+}
+
 
 export default function Skills() {
   const container = {
@@ -57,7 +46,7 @@ export default function Skills() {
     show: { opacity: 1, y: 0 }
   };
 
-  return (
+   return (
     <section id="skills" className="py-20">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -91,7 +80,7 @@ export default function Skills() {
           whileInView="show"
           viewport={{ once: true }}
         >
-          {skillCategories.map((category, index) => (
+          {skillsData.map((category, index) => (
             <motion.div
               key={index}
               variants={item}
@@ -120,16 +109,32 @@ export default function Skills() {
                         w-14 h-14 rounded-full bg-muted flex items-center justify-center text-xl
                         group-hover:bg-muted/50 transition-colors duration-300
                         border border-transparent group-hover:border-primary/20
+                        cursor-pointer
+                        ${skill.color}
                       `}
                       whileHover={{
-                        y: -5,
-                        transition: { type: "spring", stiffness: 300 }
+                        y: -8,
+                        scale: 1.1,
+                        boxShadow: "0 10px 20px rgba(0, 0, 0, 0.1)",
+                        transition: { type: "spring", stiffness: 300, damping: 20 }
+                      }}
+                      whileTap={{ scale: 0.95 }}
+                      animate={{
+                        y: [0, -3, 0],
+                      }}
+                      transition={{
+                        duration: 3 + idx * 0.2,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                        delay: idx * 0.1
                       }}
                     >
-                      {skill.icon}
+                      {iconMap[skill.iconName]}
                     </motion.div>
                     <motion.span 
                       className="text-xs text-center text-muted-foreground group-hover:text-foreground transition-colors duration-300"
+                      initial={{ opacity: 1 }}
+                      whileHover={{ opacity: 1 }}
                     >
                       {skill.name}
                     </motion.span>
