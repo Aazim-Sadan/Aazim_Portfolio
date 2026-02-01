@@ -12,6 +12,7 @@ import { skillsData } from "@/constants/skills";
 const iconMap: Record<string, React.ReactNode> = {
   FaJs: <FaJs />,
   FaReact: <FaReact />,
+  FaReactNative: <FaReact />,
   SiTypescript: <SiTypescript />,
   RiNextjsFill: <RiNextjsFill />,
   FaHtml5: <FaHtml5 />,

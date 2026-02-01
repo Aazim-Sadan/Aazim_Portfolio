@@ -5,6 +5,7 @@ export const skillsData = [
       { name: "JavaScript", iconName: "FaJs", color: "text-yellow-400" },
       { name: "React.js", iconName: "FaReact", color: "text-blue-500" },
       { name: "Next.js", iconName: "RiNextjsFill", color: "text-black dark:text-white" },
+      { name: "React Native", iconName: "FaReact", color: "text-sky-400" },
       { name: "TypeScript", iconName: "SiTypescript",  color:"text-blue-600" },
       { name: "HTML", iconName: "FaHtml5", color:"text-orange-600"  },
       { name: "CSS", iconName: "FaCss3", color:"text-blue-500"  },
