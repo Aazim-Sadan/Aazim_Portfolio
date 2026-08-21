@@ -1,11 +1,11 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { FaCss3, FaGitAlt, FaGithub, FaHtml5, FaJs, FaReact } from "react-icons/fa";
-import { SiFirebase, SiMongodb, SiMysql, SiPostgresql, SiPostman, SiShadcnui, SiTypescript } from "react-icons/si";
+import { FaAws, FaCss3, FaGitAlt, FaGithub, FaHtml5, FaJs, FaReact } from "react-icons/fa";
+import { SiCircleci, SiDjango, SiDocker, SiFirebase, SiJsonwebtokens, SiMongodb, SiMysql, SiNodedotjs, SiPostgresql, SiPostman, SiShadcnui, SiTypescript } from "react-icons/si";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { VscVscode } from "react-icons/vsc";
-import {  IoLogoVercel } from "react-icons/io5";
+import { IoLogoVercel } from "react-icons/io5";
 import { skillsData } from "@/constants/skills";
 
 
@@ -28,6 +28,13 @@ const iconMap: Record<string, React.ReactNode> = {
   FaGithub: <FaGithub />,
   VscVscode: <VscVscode />,
   IoLogoVercel: <IoLogoVercel />,
+  SiDjango: <SiDjango />,
+  SiDjango: <SiDjango />,
+  SiJsonwebtokens: <SiJsonwebtokens />,
+  FaAws: <FaAws />,
+  SiDocker: <SiDocker />,
+  SiCircleci: <SiCircleci />,
+  SiNodedotjs: <SiNodedotjs />
 }
 
 
@@ -47,7 +54,7 @@ export default function Skills() {
     show: { opacity: 1, y: 0 }
   };
 
-   return (
+  return (
     <section id="skills" className="py-20">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -55,7 +62,7 @@ export default function Skills() {
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        <motion.h2 
+        <motion.h2
           className="text-3xl font-bold mb-6"
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -64,7 +71,7 @@ export default function Skills() {
         >
           My Skills
         </motion.h2>
-        <motion.p 
+        <motion.p
           className="text-muted-foreground mb-10"
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -74,7 +81,7 @@ export default function Skills() {
           Technologies and tools I've worked with throughout my projects and experience
         </motion.p>
 
-        <motion.div 
+        <motion.div
           className="grid gap-10"
           variants={container}
           initial="hidden"
@@ -86,9 +93,9 @@ export default function Skills() {
               key={index}
               variants={item}
             >
-              <motion.h3 
+              <motion.h3
                 className="text-xl font-semibold mb-4"
-                whileHover={{ 
+                whileHover={{
                   x: 5,
                   transition: { type: "spring", stiffness: 300 }
                 }}
@@ -97,15 +104,15 @@ export default function Skills() {
               </motion.h3>
               <div className="flex flex-wrap gap-4">
                 {category.skills.map((skill, idx) => (
-                  <motion.div 
-                    key={idx} 
+                  <motion.div
+                    key={idx}
                     className="flex flex-col items-center gap-2 group"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.3, delay: 0.1 * idx }}
                   >
-                    <motion.div 
+                    <motion.div
                       className={`
                         w-14 h-14 rounded-full bg-muted flex items-center justify-center text-xl
                         group-hover:bg-muted/50 transition-colors duration-300
@@ -132,7 +139,7 @@ export default function Skills() {
                     >
                       {iconMap[skill.iconName]}
                     </motion.div>
-                    <motion.span 
+                    <motion.span
                       className="text-xs text-center text-muted-foreground group-hover:text-foreground transition-colors duration-300"
                       initial={{ opacity: 1 }}
                       whileHover={{ opacity: 1 }}

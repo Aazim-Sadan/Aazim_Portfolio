@@ -10,7 +10,7 @@ import {
   RiTailwindCssFill,
   RiTwitterXLine,
 } from "react-icons/ri";
-import { SiMongodb, SiReact } from "react-icons/si";
+import { SiDjango, SiMongodb, SiReact } from "react-icons/si";
 import Link from "next/link";
 
 export default function Hero() {
@@ -44,14 +44,13 @@ export default function Hero() {
           </div>
 
           <p className="text-muted-foreground text-sm sm:text-base">
-            A goal-oriented software developer with experience in building web
-            and mobile applications using modern technologies like React,
-            React Native, and Next.js. Seeking to leverage my technical skills
-            to deliver exceptional, user-centric experiences.
+            I’m a developer who enjoys building web, mobile, and backend applications. I work mainly with React, Next.js, React Native, 
+            Django, and PostgreSQL, and I like turning ideas into simple, useful, and reliable products that solve real-world problems.
+
           </p>
 
           <div className="flex flex-wrap gap-2 sm:gap-3">
-            <Link href="/AazimResume.pdf" target="_blank" download>
+            <Link href="/Aazim_Sadan_Fullstack_Developer_Resume.pdf" target="_blank" download>
               <Button size="sm" className="text-xs sm:text-sm">
                 <Download className="mr-2 h-3 w-3 sm:h-4 sm:w-4" /> Resume
               </Button>
@@ -170,7 +169,7 @@ export default function Hero() {
                   }}
                   className="text-4xl text-green-600"
                 >
-                  <SiMongodb />
+                  <SiDjango />
                 </motion.div>
               </motion.div>
 
@@ -258,7 +257,7 @@ export default function Hero() {
                 delay: 1.5,
               }}
             >
-              MongoDB
+              Django
             </motion.div>
           </div>
         </motion.div>
